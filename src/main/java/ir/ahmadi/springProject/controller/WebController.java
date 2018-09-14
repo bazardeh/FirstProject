@@ -24,7 +24,7 @@ public class WebController {
 
     @RequestMapping(path = "/")
     public String date() {
-        return "date : " + new Date();
+        return "Date Is  : " + new Date();
     }
 
     @RequestMapping("/find")
