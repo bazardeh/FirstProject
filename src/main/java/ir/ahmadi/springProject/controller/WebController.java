@@ -34,7 +34,7 @@ public class WebController {
 
             List<Student> allStudent = studentService.findAllStudent();
             String gsonString = gson.toJson(allStudent);
-            return gsonString;
+            return gsonString + "\n\n\n\t\t Count All Student : " + studentService.countAllStudent().toString();
 
         } catch (Exception ee) {
             ee.printStackTrace();
