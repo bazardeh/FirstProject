@@ -21,6 +21,7 @@ public class WebController {
     @Autowired
     StudentRepository studentRepository;
 
+
     @RequestMapping(path = "/")
     public String date() {
         return "date : " + new Date();
