@@ -1,5 +1,6 @@
 package ir.ahmadi.springProject;
 
+import ir.ahmadi.springProject.SpringProjectApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
