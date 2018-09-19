@@ -28,7 +28,7 @@ public class WebController {
         return "Date Is  : " + new Date();
     }
 
-    @RequestMapping(value = "/find" , produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/find", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String processFind() {
         try {
             Gson gson = new Gson();
@@ -42,6 +42,22 @@ public class WebController {
             return "Error";
         }
     }
+
+    @RequestMapping(value = "/finder")
+    public String finder() {
+        try {
+            Gson gson = new Gson();
+
+            List<Student> allStudent = studentService.findAllStudent();
+            String gsonString = gson.toJson(allStudent);
+            return gsonString;
+
+        } catch (Exception ee) {
+            ee.printStackTrace();
+            return "Error";
+        }
+    }
+
 
     @RequestMapping("/save")
     public String processSave(@RequestParam("name") String name, @RequestParam("lastname") String lastname) {

@@ -1,41 +1,32 @@
 package ir.ahmadi.springProject.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class TestRequestController {
-    @RequestMapping(path = "/a")
+    @RequestMapping(path = "/name")
     public String a() {
         return "name";
     }
 
-    @RequestMapping(path = "/b")
+    @RequestMapping(path = "/home")
     public String b() {
         return "home";
     }
 
-    @RequestMapping(path = "/c")
+    @RequestMapping(path = "/main")
     public String c() {
         return "main";
     }
 
-    @RequestMapping(path = "/abc")
-    public String abc() {
-        return "abc";
+    @RequestMapping(path = "/one1")
+    public String one1() {
+        return "one";
     }
 
-    @RequestMapping(path = "/abcc")
-    public String abcc() {
-        return "/abcd";
+    @RequestMapping(path = "/one2")
+    public String one2() {
+        return "one";
     }
-
-
-    @RequestMapping(value = "/abcd", method = RequestMethod.GET)
-    public String showLoginPage() {
-        return "abcd";
-    }
-
 }
