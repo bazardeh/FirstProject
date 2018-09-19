@@ -3,13 +3,14 @@ function callRest() {
         type: 'POST',
         contentType: 'application/json',
         url: "http://localhost:8080/finder",
-        success: function(data){
-            debugger;
-            alert('Stock updated successfully. Status: '+data);
-            },
-        error: function(error){
-            debugger;
-            alert('update Stock error: ' + error);
+        success: function (data) {
+            // debugger;
+            console.log('[function rest successfully : ' + data + ']');
+        },
+        error: function (error) {
+            // debugger;
+            alert('[function error]: ' + error);
+            console.log("[function error]");
         }
     });
 }
@@ -18,3 +19,7 @@ function callRest() {
 function aaa(data) {
 
 }
+
+$(function () {
+    console.log("[start app]");
+});
