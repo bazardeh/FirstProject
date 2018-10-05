@@ -5,6 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class TestRequestController {
+
+    @RequestMapping(path = "/")
+    public String showBarStudent() {
+        return "barStudent";
+    }
+
     @RequestMapping(path = "/name")
     public String a() {
         return "name";

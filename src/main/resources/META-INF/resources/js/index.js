@@ -1,4 +1,5 @@
 function callRest() {
+    debugger;
     $.ajax({
         type: 'POST',
         contentType: 'application/json',

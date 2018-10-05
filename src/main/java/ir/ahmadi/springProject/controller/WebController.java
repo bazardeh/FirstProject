@@ -6,11 +6,11 @@ import ir.ahmadi.springProject.repository.StudentRepository;
 import ir.ahmadi.springProject.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -21,12 +21,6 @@ public class WebController {
 
     @Autowired
     StudentRepository studentRepository;
-
-
-    @RequestMapping(path = "/")
-    public String date() {
-        return "Date Is  : " + new Date();
-    }
 
     @RequestMapping(value = "/find", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String processFind() {
