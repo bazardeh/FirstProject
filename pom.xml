@@ -4,17 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ir.ahmadi</groupId>
-    <artifactId>springProject</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <artifactId>SpringProject</artifactId>
+    <version>0.2.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-    <name>springProject</name>
+    <name>SpringProject</name>
     <description>project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
+        <version>2.0.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -62,8 +62,9 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.5</version>
+            <version>2.8.4</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.webjars</groupId>
@@ -107,8 +108,20 @@
             <version>1.2.5</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>com.tilab.jade</groupId>-->
+            <!--<artifactId>jade</artifactId>-->
+            <!--<version>4.5.0</version>-->
+        <!--</dependency>-->
+
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>tilab</id>
+            <url>http://jade.tilab.com/maven/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -138,21 +151,21 @@
 
 
         <!--<resources>-->
-            <!--<resource>-->
-                <!--<directory>${project.basedir}/src/main/resources</directory>-->
-                <!--<filtering>true</filtering>-->
-                <!--<excludes>-->
-                    <!--<exclude>static/fonts/**</exclude>-->
-                <!--</excludes>-->
-            <!--</resource>-->
+        <!--<resource>-->
+        <!--<directory>${project.basedir}/src/main/resources</directory>-->
+        <!--<filtering>true</filtering>-->
+        <!--<excludes>-->
+        <!--<exclude>static/fonts/**</exclude>-->
+        <!--</excludes>-->
+        <!--</resource>-->
 
-            <!--<resource>-->
-                <!--<directory>${project.basedir}/src/main/resources</directory>-->
-                <!--<filtering>false</filtering>-->
-                <!--<includes>-->
-                    <!--<include>static/fonts/**</include>-->
-                <!--</includes>-->
-            <!--</resource>-->
+        <!--<resource>-->
+        <!--<directory>${project.basedir}/src/main/resources</directory>-->
+        <!--<filtering>false</filtering>-->
+        <!--<includes>-->
+        <!--<include>static/fonts/**</include>-->
+        <!--</includes>-->
+        <!--</resource>-->
         <!--</resources>-->
 
     </build>
