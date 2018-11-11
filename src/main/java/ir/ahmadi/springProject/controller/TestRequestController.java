@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TestRequestController {
 
     @RequestMapping(path = "/")
-    public String showBarStudent() {
-        return "barStudent";
+    public String showLoginPage() {
+        return "loginPage";
     }
 
     @RequestMapping(path = "/name")
