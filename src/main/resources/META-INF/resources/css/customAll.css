@@ -1,0 +1,15 @@
+.fontBJadid {
+    font-family: "B Jadid", "B Mitra", 'Bree Serif', serif;
+}
+
+#titleHomePage:hover {
+    color: #d9e4f1;
+}
+
+#exitHomePage:hover {
+    color: #d9e4f1;
+}
+
+a {
+    float: right !important;
+}

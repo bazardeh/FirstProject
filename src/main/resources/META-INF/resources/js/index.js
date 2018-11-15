@@ -3,7 +3,7 @@ function callRest() {
     $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: "http://localhost:8080/finder",
+        url: "/finder",
         success: function (data) {
             debugger;
             successFunction(data);

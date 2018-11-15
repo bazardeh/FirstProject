@@ -1,7 +1,9 @@
 package ir.ahmadi.springProject.controller;
 
 import com.google.gson.Gson;
+import ir.ahmadi.springProject.model.DataInsert;
 import ir.ahmadi.springProject.model.Student;
+import ir.ahmadi.springProject.repository.DataInsertRepository;
 import ir.ahmadi.springProject.repository.StudentRepository;
 import ir.ahmadi.springProject.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,20 @@ public class WebController {
 
     @Autowired
     StudentRepository studentRepository;
+
+    @Autowired
+    DataInsertRepository dataInsertRepository;
+
+    @RequestMapping(value = "/finderDataTable", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String finderDataTable() {
+        try {
+            List<DataInsert> allDataInsert = dataInsertRepository.findAll();
+            return new Gson().toJson(allDataInsert);
+        } catch (Exception ee) {
+            ee.printStackTrace();
+            return "Error";
+        }
+    }
 
     @RequestMapping(value = "/find", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String processFind() {
@@ -55,6 +71,7 @@ public class WebController {
 
     @RequestMapping("/save")
     public String processSave(@RequestParam("name") String name, @RequestParam("lastname") String lastname) {
+//        http://localhost:8080/save?name=%22farashad%22&lastname=%22sarhandi%22
         try {
             name = name.trim();
             lastname = lastname.trim();

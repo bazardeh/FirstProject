@@ -11,9 +11,9 @@ public class TestRequestController {
         return "loginPage";
     }
 
-    @RequestMapping(path = "/name")
-    public String a() {
-        return "name";
+    @RequestMapping(path = "/table")
+    public String table() {
+        return "table";
     }
 
     @RequestMapping(path = "/home")
@@ -26,13 +26,13 @@ public class TestRequestController {
         return "main";
     }
 
-    @RequestMapping(path = "/one1")
-    public String one1() {
-        return "one";
+    @RequestMapping(path = "/barStudent")
+    public String barStudent() {
+        return "barStudent";
     }
 
-    @RequestMapping(path = "/one2")
-    public String one2() {
-        return "one";
+    @RequestMapping(path = "/homePage")
+    public String homePage() {
+        return "homePage";
     }
 }

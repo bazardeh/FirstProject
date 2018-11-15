@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 @Table(name = "Student")
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
