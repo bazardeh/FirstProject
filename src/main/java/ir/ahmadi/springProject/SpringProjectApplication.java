@@ -7,14 +7,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class SpringProjectApplication implements CommandLineRunner {
+public class SpringProjectApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringProjectApplication.class, args);
     }
-
-    @Override
-    public void run(String... args) throws Exception {
-    }
-
-
 }

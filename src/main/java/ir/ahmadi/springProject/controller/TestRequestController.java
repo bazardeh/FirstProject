@@ -31,6 +31,11 @@ public class TestRequestController {
         return "barStudent";
     }
 
+    @RequestMapping(path = "/loginPage2")
+    public String loginPage2() {
+        return "loginPage2";
+    }
+
     @RequestMapping(path = "/homePage")
     public String homePage() {
         return "homePage";
