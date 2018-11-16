@@ -9,6 +9,9 @@
     <title>پرتال اینترنتی - صفحه ورود کاربران</title>
 
     <link rel="stylesheet" type="text/css" href="css/styleLogin.css"/>
+    <link rel="stylesheet" href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!--<link rel="stylesheet" href="/webjars/font-awesome/5.5.0/css/fontawesome.min.css"/>-->
+    <script type="text/javascript" src="/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
 
@@ -28,14 +31,17 @@
         </div>
 
         <div class="content">
-            <input id="username" name="username" type="text" class="input username" value="" placeholder="نام کاربری" />
-            <input id="password" name="password" type="password" class="input password" value="" placeholder="گذر واژه"/>
+            <input id="username" name="username" type="text" class="input username" value="" placeholder="نام کاربری"/>
+            <input id="password" name="password" type="password" class="input password" value=""
+                   placeholder="گذر واژه"/>
         </div>
 
         <div class="footer">
-            <input type="button" name="button" onclick="loginUser();" value="ورود" class="button"/>
+            <!--<input type="button" name="button" onclick="loginUser();" value="ورود" class="button"/>-->
+            <button class="button" type="button" name="button" onclick="loginUser();"><i class="fa fa-sign-in"></i>&nbsp;&nbsp;ورود</button>
+            <!--<span><i class="fa fa-address-book " style="font-size: large"></i></span>-->
+            <!--<input type="button" name="button" class="button" value="Basket" onclick="loginUser();"/>-->
         </div>
-
     </form>
 
 </div>
